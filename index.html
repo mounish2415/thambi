@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Thambi 🎂❤️ | A Journey of Brotherhood</title>
+  <meta name="description" content="A premium, interactive digital story and birthday celebration for my beloved brother Thambi. Made with love, gold glassmorphism, and beautiful memories." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Canvas for Global Particle Effects (Golden Sparkles & Floating Balloons) -->
+  <canvas id="bg-particles" class="bg-canvas"></canvas>
+
+  <!-- Interactive Premium Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader-content">
+      <!-- Custom CSS/SVG Interactive Cake Loader -->
+      <div class="loader-cake">
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+        <div class="cake-tier top"></div>
+        <div class="cake-tier middle"></div>
+        <div class="cake-tier bottom"></div>
+      </div>
+      <h2 class="loader-title">Crafting a Golden Journey...</h2>
+      <div class="loader-bar-container">
+        <div id="loader-progress" class="loader-progress"></div>
+      </div>
+      <p class="loader-percentage">0%</p>
+      <button id="start-btn" class="start-btn hidden">Enter the Celebration ✧</button>
+    </div>
+  </div>
+
+  <!-- Main Application Container -->
+  <div id="app" class="app hidden">
+    
+    <!-- Floating Audio & Navigation HUD -->
+    <header class="hud-header">
+      <div class="hud-left">
+        <span class="hud-brand">FOR MY THAMBI</span>
+      </div>
+      <div class="hud-right">
+        <!-- Floating Music Control -->
+        <button id="music-toggle" class="hud-btn music-btn" aria-label="Toggle Background Music">
+          <span class="music-icon">🎵</span>
+          <span class="music-pulse"></span>
+          <span class="music-text">PLAY SONG</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Page Transition Progress Bar -->
+    <div class="progress-bar-indicator">
+      <div id="page-progress" class="progress-fill" style="width: 16.66%;"></div>
+    </div>
+
+    <!-- Main Storyboard Wrapper -->
+    <main class="storyboard">
+
+      <!-- ==================== PAGE 1: HOME ==================== -->
+      <section class="page active" id="page-1" data-page="1">
+        <div class="glass card hero-card">
+          <div class="card-glow"></div>
+          <div class="hero-content">
+            <h1 class="hero-title animate-pop" style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 1.5rem;">19th Year of Your Journey Begins ✧</h1>
+            <p class="hero-subtitle animate-slide">"Brothers are not just family; they are lifelong friends, protectors, and blessings."</p>
+            
+            <div class="hero-frame-container" style="margin-bottom: 1rem;">
+              <div class="image-frame" style="max-width: 320px;">
+                <img src="assets/images/collage.jpg" alt="Family Photo" class="hero-img" />
+                <div class="image-overlay-glow"></div>
+              </div>
+            </div>
+
+            <button class="next-btn premium-btn" data-next="2">
+              <span>Begin the Journey</span>
+              <span class="btn-arrow">➜</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PAGE 2: MEMORIES ==================== -->
+      <section class="page" id="page-2" data-page="2">
+        <div class="glass card gallery-card">
+          <div class="card-glow"></div>
+          <div class="section-header">
+            <h2 class="section-title">Beautiful Childhood Memories 📸</h2>
+            <p class="quote">"Some memories may fade with time, but the love between brothers only grows stronger."</p>
+          </div>
+          
+          <!-- Polaroid Photo Gallery -->
+          <div class="polaroid-gallery">
+            <div class="polaroid-wrapper" style="--rotation: -4deg;">
+              <div class="polaroid" data-caption="Building castles in our cardboard box fort.">
+                <div class="polaroid-img-container">
+                  <img src="assets/images/childhood1.png" alt="Childhood Memory 1" />
+                </div>
+                <div class="polaroid-footer">
+                  <p class="polaroid-date">2008 • Playtime</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="polaroid-wrapper" style="--rotation: 3deg;">
+              <div class="polaroid" data-caption="Double trouble on our first bicycle adventure.">
+                <div class="polaroid-img-container">
+                  <img src="assets/images/childhood2.png" alt="Childhood Memory 2" />
+                </div>
+                <div class="polaroid-footer">
+                  <p class="polaroid-date">2011 • Bicycle Ride</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="polaroid-wrapper" style="--rotation: -2deg;">
+              <div class="polaroid" data-caption="Stargazing together, dreaming of the universe.">
+                <div class="polaroid-img-container">
+                  <img src="assets/images/childhood3.png" alt="Childhood Memory 3" />
+                </div>
+                <div class="polaroid-footer">
+                  <p class="polaroid-date">2014 • Starry Nights</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="polaroid-wrapper" style="--rotation: 5deg;">
+              <div class="polaroid" data-caption="Always sharing, through storms and downpours.">
+                <div class="polaroid-img-container">
+                  <img src="assets/images/childhood4.png" alt="Childhood Memory 4" />
+                </div>
+                <div class="polaroid-footer">
+                  <p class="polaroid-date">2017 • Rainy Days</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid Lightbox Modal -->
+          <div id="lightbox" class="lightbox hidden">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content-box">
+              <img id="lightbox-img" src="" alt="Zoomed Polaroid" />
+              <p id="lightbox-caption" class="lightbox-caption"></p>
+            </div>
+          </div>
+
+          <button class="next-btn premium-btn" data-next="3">
+            <span>See Your Growth</span>
+            <span class="btn-arrow">➜</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== PAGE 3: GROWTH & SUCCESS ==================== -->
+      <section class="page" id="page-3" data-page="3">
+        <div class="glass card growth-card">
+          <div class="card-glow"></div>
+          <div class="section-header">
+            <h2 class="section-title">Growth & Success</h2>
+            <p class="quote">"Every year you grow wiser, stronger, and more inspiring. Keep shining and chasing your dreams."</p>
+          </div>
+
+          <div class="growth-container">
+            <div class="growth-left">
+              <div class="image-frame present-frame">
+                <img src="assets/images/present.jpg" alt="Present day Thambi" class="present-img" />
+                <div class="image-overlay-glow"></div>
+              </div>
+            </div>
+            
+            <div class="growth-right">
+              <!-- Interactive Timeline -->
+              <div class="timeline">
+                <div class="timeline-line">
+                  <div class="timeline-progress" id="timeline-progress-bar"></div>
+                </div>
+                
+                <div class="timeline-event" data-year="Childhood">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-info">
+                    <span class="timeline-date">The Early Years</span>
+                    <h3>Curious & Full of Joy</h3>
+                    <p>A bubbly child filled with laughter, exploring every corner of life with big, dreamy eyes.</p>
+                  </div>
+                </div>
+                
+                <div class="timeline-event" data-year="Teenage">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-info">
+                    <span class="timeline-date">School & Discoveries</span>
+                    <h3>Building Foundations</h3>
+                    <p>Learning, making lifelong friends, discovering talents, and finding passions that would shape the future.</p>
+                  </div>
+                </div>
+                
+                <div class="timeline-event" data-year="Present">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-info">
+                    <span class="timeline-date">Today & Beyond</span>
+                    <h3>Unstoppable Visionary</h3>
+                    <p>Wiser, more capable, standing strong on the path of your ambitions, turning dreams into achievements.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animated Achievement Cards -->
+          <div class="achievement-grid">
+            <div class="achievement-card">
+              <div class="ach-glow"></div>
+              <div class="ach-icon">🌟</div>
+              <h4>Visionary</h4>
+              <p>Chasing heights, dreaming big, and building your future with passion.</p>
+            </div>
+            <div class="achievement-card">
+              <div class="ach-glow"></div>
+              <div class="ach-icon">🛡️</div>
+              <h4>Protector</h4>
+              <p>A constant pillar of support, loyalty, and strength to those you love.</p>
+            </div>
+            <div class="achievement-card">
+              <div class="ach-glow"></div>
+              <div class="ach-icon">💡</div>
+              <h4>Inspiration</h4>
+              <p>Guiding our smiles, spreading joy, and brightening up every single room.</p>
+            </div>
+          </div>
+
+          <button class="next-btn premium-btn" data-next="4">
+            <span>Read My Wishes</span>
+            <span class="btn-arrow">➜</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== PAGE 4: BLESSINGS ==================== -->
+      <section class="page" id="page-4" data-page="4">
+        <div class="glass card blessings-card">
+          <div class="card-glow"></div>
+          
+          <!-- Animated Background Divine Rays -->
+          <div class="divine-light-rays"></div>
+
+          <div class="section-header">
+            <h2 class="section-title gold-glow">Heavenly Blessings</h2>
+          </div>
+
+          <!-- Self-Drawing Gold Angel Wings SVG -->
+          <div class="wings-drawing-container">
+            <svg class="angel-wings-svg" viewBox="0 0 400 200">
+              <!-- Left Wing -->
+              <path class="wing-path" d="M 200 100 C 180 50, 130 30, 80 40 C 40 48, 20 80, 45 110 C 60 120, 80 115, 100 105 C 80 125, 70 145, 90 145 C 110 145, 125 125, 140 110 C 130 135, 135 155, 150 155 C 170 155, 185 130, 195 110 L 200 100" fill="none" stroke="#d4af37" stroke-width="2.5" />
+              <!-- Right Wing -->
+              <path class="wing-path" d="M 200 100 C 220 50, 270 30, 320 40 C 360 48, 380 80, 355 110 C 340 120, 320 115, 300 105 C 320 125, 330 145, 310 145 C 290 145, 275 125, 260 110 C 270 135, 265 155, 250 155 C 230 155, 215 130, 205 110 L 200 100" fill="none" stroke="#d4af37" stroke-width="2.5" />
+              <!-- Halo -->
+              <ellipse class="halo-path" cx="200" cy="20" rx="35" ry="10" fill="none" stroke="#fff" stroke-width="2.5" />
+            </svg>
+          </div>
+
+          <div class="blessings-list">
+            <div class="blessing-item" style="--delay: 1.5s;">
+              <span class="blessing-icon">✨</span>
+              <p class="blessing-text">"May your life be filled with endless happiness and success."</p>
+            </div>
+            <div class="blessing-item" style="--delay: 2.5s;">
+              <span class="blessing-icon">💫</span>
+              <p class="blessing-text">"May every dream you dream turn into reality."</p>
+            </div>
+            <div class="blessing-item" style="--delay: 3.5s;">
+              <span class="blessing-icon">🛡️</span>
+              <p class="blessing-text">"May God bless you with good health, peace, and prosperity."</p>
+            </div>
+            <div class="blessing-item" style="--delay: 4.5s;">
+              <span class="blessing-icon">☀️</span>
+              <p class="blessing-text">"May your smile continue to light up every room you enter."</p>
+            </div>
+          </div>
+
+          <button class="next-btn premium-btn" data-next="5">
+            <span>Special Message</span>
+            <span class="btn-arrow">➜</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== PAGE 5: SPECIAL MESSAGE ==================== -->
+      <section class="page" id="page-5" data-page="5">
+        <!-- Canvas for Heart-specific particles page 5 -->
+        <canvas id="heart-particles" class="heart-canvas"></canvas>
+
+        <div class="glass card letter-card">
+          <div class="card-glow"></div>
+          <div class="section-header">
+            <h2 class="section-title">A Message From My Heart</h2>
+          </div>
+
+          <!-- Interactive 3D Envelope -->
+          <div class="envelope-wrapper">
+            <div class="envelope">
+              <div class="envelope-flap"></div>
+              <div class="envelope-pocket"></div>
+              
+              <!-- Letter Sheet -->
+              <div class="letter-sheet">
+                <div class="letter-hdr">
+                  <span class="letter-stamp">✧</span>
+                </div>
+                <div class="letter-body">
+                  <p class="letter-salutation">Dear Thambi,</p>
+                  <p class="letter-paragraph">
+                    On your special day, I want you to know how proud I am of the person you have become. You are not only my brother but also my greatest blessing. May your life be filled with happiness, success, and unforgettable memories. Keep smiling, keep growing, and never stop believing in yourself.
+                  </p>
+                  <p class="letter-paragraph">
+                    Happy Birthday, Thambi! ❤️🎂
+                  </p>
+                  <p class="letter-signature">With love always,</p>
+                  <p class="letter-sender">Your Brother</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="envelope-hint">Click the envelope to read your letter</p>
+
+          <button class="next-btn premium-btn hidden" id="message-next-btn" data-next="6">
+            <span>Final Surprise</span>
+            <span class="btn-arrow">➜</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== PAGE 6: FINAL CELEBRATION ==================== -->
+      <section class="page" id="page-6" data-page="6">
+        <!-- Interactive Fireworks Canvas -->
+        <canvas id="fireworks-canvas" class="fireworks-canvas"></canvas>
+
+        <div class="celebration-wrapper">
+          <div class="celebration-foreground">
+            <h1 class="final-celebration-title animate-pop">Happy Birthday Thambi 🎂❤️</h1>
+            <p class="final-celebration-quote">A special day for a special soul who fills our lives with happiness, laughter, and endless love.</p>
+            
+            <div class="hero-frame-container" style="margin-bottom: 2rem; width: 100%;">
+              <div class="image-frame" style="max-width: 240px; margin: 0 auto;">
+                <img src="assets/images/childhood.jpg" alt="Childhood photo of Thambi" class="hero-img" />
+                <div class="image-overlay-glow"></div>
+              </div>
+            </div>
+
+            <!-- Premium Custom Interactive SVG Birthday Cake -->
+            <div class="interactive-svg-cake-container" style="width: 150px; height: 150px; margin: 0 auto 2rem auto; display: block;">
+              <svg class="interactive-cake" viewBox="0 0 200 200">
+                <!-- Stand -->
+                <path d="M 40 160 L 160 160 L 150 170 L 50 170 Z" fill="#aa7c11" />
+                <rect x="90" y="150" width="20" height="10" fill="#d4af37" />
+                <!-- Bottom Tier -->
+                <path d="M 50 150 L 150 150 L 150 110 L 50 110 Z" fill="#0c194a" stroke="#d4af37" stroke-width="1.5" />
+                <path d="M 50 110 Q 100 125 150 110" fill="none" stroke="#d4af37" stroke-dasharray="4,4" />
+                <path d="M 50 120 C 60 125, 70 120, 80 125 C 90 120, 100 125, 110 120 C 120 125, 130 120, 140 125 C 145 120, 150 125, 150 120" fill="none" stroke="#f3e5ab" stroke-width="3" />
+                <!-- Top Tier -->
+                <path d="M 65 110 L 135 110 L 135 75 L 65 75 Z" fill="#071035" stroke="#d4af37" stroke-width="1.5" />
+                <path d="M 65 85 C 75 90, 85 85, 95 90 C 105 85, 115 90, 125 85 C 130 90, 135 85, 135 85" fill="none" stroke="#f3e5ab" stroke-width="2.5" />
+                <!-- Candles -->
+                <rect x="80" y="60" width="6" height="15" fill="#f3e5ab" rx="2" />
+                <rect x="97" y="55" width="6" height="20" fill="#f3e5ab" rx="2" />
+                <rect x="114" y="60" width="6" height="15" fill="#f3e5ab" rx="2" />
+                <!-- Flames -->
+                <path class="candle-flame" d="M 83 60 C 80 50, 86 50, 83 44 C 80 50, 86 50, 83 60" fill="#ff9900" />
+                <path class="candle-flame main" d="M 100 55 C 97 43, 103 43, 100 35 C 97 43, 103 43, 100 55" fill="#ffcc00" />
+                <path class="candle-flame" d="M 117 60 C 114 50, 120 50, 117 44 C 114 50, 120 50, 117 60" fill="#ff9900" />
+              </svg>
+            </div>
+
+            <button id="replay" class="replay-btn premium-btn">
+              <span>Replay the Journey</span>
+              <span class="btn-arrow">🔄</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Script Modules -->
+  <script src="script.js"></script>
+</body>
+</html>
